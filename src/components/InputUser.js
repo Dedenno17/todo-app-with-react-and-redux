@@ -24,7 +24,7 @@ const InputUser = () => {
                 placeholder="Add your new todo ..."
                 onChange={(e) => setTodo(e.target.value)}
             />
-            <button onClick={() => handleAdd(todo)}>+</button>
+            <button onClick={() => { todo === '' ? alert('You haven\'t entered what you want to do') : handleAdd(todo)}}>+</button>
         </div>
     );
 }
