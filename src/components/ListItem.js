@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import trash from '../image/trash-solid.svg' ;
 
 const ListItem = () => {
     
@@ -7,7 +8,10 @@ const ListItem = () => {
     return (
         <ul className="list-item">
             {item.map((it) => {
-                return <li key={it.id}>{it.item}</li>
+                return <li key={it.id}>
+                            {it.item}
+                            <button><img src={trash} alt='trash'/></button>
+                       </li>
             })}
         </ul>
     );
