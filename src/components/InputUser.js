@@ -15,6 +15,7 @@ const InputUser = () => {
         newList.push(newItem);
 
         dispatch(setItem(newList));
+        setTodo('');
     }
 
     return (
@@ -22,6 +23,7 @@ const InputUser = () => {
             <input
                 type='text'
                 placeholder="Add your new todo ..."
+                value={todo}
                 onChange={(e) => setTodo(e.target.value)}
             />
             <button onClick={() => { todo === '' ? alert('You haven\'t entered what you want to do') : handleAdd(todo)}}>+</button>
